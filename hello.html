@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+
+  <style>
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+      fill: currentColor;
+    }
+  </style>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <nav x-data="{ isOpen: false }" class="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
+      <div class="flex justify-between">
+        <a href="#">
+          <img src="https://qmassets.s3.amazonaws.com/QwikMed+Logo+-+Website.png" width="120" height="50" alt="QwikMed logo" />
+        </a>
+        <button class="text-gray-500 outline-none md:hidden" @click="isOpen = !isOpen">
+          <template x-if="isOpen">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </template>
+          <template x-if="!isOpen">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </template>
+        </button>
+      </div>
+      <ul :class="isOpen ? 'absolute inset-x-0 px-4 border-b bg-white md:border-none md:static' : 'hidden'" class="flex-1 justify-between mt-12 md:text-sm md:font-medium md:flex md:mt-0">
+        <div class="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12">
+          <li class="text-gray-500 hover:text-indigo-600">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="text-gray-500 hover:text-indigo-600">
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li class="text-gray-500 hover:text-indigo-600">
+            <a href="javascript:void(0)">Order on WhatsApp</a>
+          </li>
+          <li class="text-gray-500 hover:text-indigo-600">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </div>
+        <li class="order-2 py-5 md:py-0">
+          <a href="javascript:void(0)" class="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline">
+            Get started
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="py-28">
+      <div class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
+        <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+          <h1 class="text-2xl text-indigo-600 font-medium">
+            <span style="color: #0097b2">Get Well Soon</span> just got Sooner!
+          </h1>
+          <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">
+            Your
+            <span style="color: #a70000;">Quickest</span> <span style="color: #0097b2">Medicine Buddies</span>
+            in Town
+          </h2>
+          <p>
+            QwikMed ensures 60-minute doorstep delivery of your essential medicines, skipping lines for your convenience. Find all you need in one place. Experience peace of mind with QwikMed. Order NOW!
+          </p>
+          <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+            <a href="javascript:void(0)" class="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
+              Order Now
+            </a>
+            <a href="javascript:void(0)" class="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">Register as Pharmacist<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex-none mt-14 md:mt-0 md:max-w-xl">
+          <img src="https://qmassets.s3.amazonaws.com/QwikMed+Banner.png" class="md:rounded-tl-[108px]" alt="QwikMed Banner" />
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
